@@ -1,1 +1,1 @@
-# TodoListSQLApp for 실프1 6주차 실습
+# 실전프로젝트 개인프로젝트 - SQLite 기반 TodoList App
