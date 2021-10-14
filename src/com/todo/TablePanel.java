@@ -28,7 +28,7 @@ public class TablePanel extends JPanel {
 	DefaultTableModel model = new DefaultTableModel(title, 0);
 
 	public TablePanel() {
-		setBackground(new Color(103, 143, 174));
+		setBackground(new Color(211, 232, 225));
 		setBorder(new EmptyBorder(50, 50, 50, 50));
 		this.conn = DbConnect.getConnection();
 		JLabel titleLabel = new JLabel();
@@ -37,8 +37,8 @@ public class TablePanel extends JPanel {
 		titleLabel.setFont(new Font("Monospaced", Font.BOLD, 24));
 		titleLabel.setHorizontalAlignment(JLabel.CENTER);
 		titleLabel.setOpaque(true); 
-		titleLabel.setForeground(Color.WHITE);
-		titleLabel.setBackground(new Color(103, 143, 174));
+		titleLabel.setForeground(Color.BLACK);
+		titleLabel.setBackground(new Color(211, 232, 225));
 		add(titleLabel);
 
 		JButton refreshButton = new JButton("새로고침");
