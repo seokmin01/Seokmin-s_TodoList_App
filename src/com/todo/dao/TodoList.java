@@ -23,7 +23,8 @@ public class TodoList {
 	}
 
 	public int addItem(TodoItem t) {
-		String sql = "insert into list (title, memo, category, current_date, due_date)" + "values (?, ?, ?, ?, ?);";
+		String sql = "insert into list (title, memo, category, current_date, due_date, place, importance)"
+				+ "values (?, ?, ?, ?, ?, ?, ?);";
 		PreparedStatement pstmt;
 		int count = 0;
 		try {
@@ -33,6 +34,8 @@ public class TodoList {
 			pstmt.setString(3, t.getCategory());
 			pstmt.setString(4, t.getCurrent_date());
 			pstmt.setString(5, t.getDue_date());
+			pstmt.setString(6, t.getPlace());
+			pstmt.setString(7, t.getImportance());
 			count = pstmt.executeUpdate();
 			pstmt.close();
 		} catch (SQLException e) {
@@ -58,7 +61,7 @@ public class TodoList {
 	}
 
 	public int updateItem(TodoItem t) {
-		String sql = "update list set title=?, memo=?, category=?, current_date=?, due_date=?" + " where id = ?;";
+		String sql = "update list set title=?, memo=?, category=?, current_date=?, due_date=?, place=?, importance=?" + " where id = ?;";
 		PreparedStatement pstmt;
 		int count = 0;
 		try {
@@ -68,7 +71,9 @@ public class TodoList {
 			pstmt.setString(3, t.getCategory());
 			pstmt.setString(4, t.getCurrent_date());
 			pstmt.setString(5, t.getDue_date());
-			pstmt.setInt(6, t.getId());
+			pstmt.setString(6, t.getPlace());
+			pstmt.setString(7, t.getImportance());
+			pstmt.setInt(8, t.getId());
 			count = pstmt.executeUpdate();
 			pstmt.close();
 		} catch (SQLException e) {
@@ -92,7 +97,9 @@ public class TodoList {
 				String description = rs.getString("memo");
 				String due_date = rs.getString("due_date");
 				String current_date = rs.getString("current_date");
-				TodoItem t = new TodoItem(title, category, description, due_date);
+				String place = rs.getString("place");
+				String importance = rs.getString("importance");
+				TodoItem t = new TodoItem(title, category, description, due_date, place, importance);
 				t.setId(id);
 				t.setCurrent_date(current_date);
 
@@ -203,7 +210,8 @@ public class TodoList {
 	private static void changeListToType(ArrayList<TodoItem> list, ResultSet rs) throws SQLException {
 		while (rs.next()) {
 			TodoItem item = new TodoItem(rs.getString("title"), rs.getString("category"), rs.getString("memo"),
-					rs.getString("current_date"), rs.getString("due_date"));
+					rs.getString("current_date"), rs.getString("due_date"), rs.getString("place"),
+					rs.getString("importance"));
 
 			int id = rs.getInt("id");
 			item.setId(id);

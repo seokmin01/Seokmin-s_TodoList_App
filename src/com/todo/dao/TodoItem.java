@@ -10,9 +10,11 @@ public class TodoItem {
 	private String desc;
 	private String due_date;
 	private String current_date;
+	private String place;
+	private String importance;
 	private int is_completed;
 
-	public TodoItem(String title, String category, String desc, String due_date) {
+	public TodoItem(String title, String category, String desc, String due_date, String place, String importance) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
 		this.title = title;
@@ -20,14 +22,19 @@ public class TodoItem {
 		this.desc = desc;
 		this.due_date = due_date;
 		this.current_date = sdf.format(new Date());
+		this.place = place;
+		this.importance = importance;
 	}
 
-	public TodoItem(String title, String category, String desc, String due_date, String current_date) {
+	public TodoItem(String title, String category, String desc, String due_date, String current_date, String place,
+			String importance) {
 		this.title = title;
 		this.category = category;
 		this.desc = desc;
 		this.due_date = due_date;
 		this.current_date = current_date;
+		this.place = place;
+		this.importance = importance;
 	}
 
 	public String getTitle() {
@@ -89,11 +96,27 @@ public class TodoItem {
 	@Override
 	public String toString() {
 		if (is_completed == 0)
-			return "[" + category + "] " + title + " - " + desc + " - " + due_date + " - " + current_date;
-		return "[" + category + "] " + title + "[V] - " + desc + " - " + due_date + " - " + current_date;
+			return "[" + category + "] " + title + " - " + desc + " - " + due_date + " - " + current_date + " - " + place + " - " + importance;
+		return "[" + category + "] " + title + "[V] - " + desc + " - " + due_date + " - " + current_date + " - " + place + " - " + importance;
 	}
 
 	public String toSaveString() {
 		return category + "##" + title + "##" + desc + "##" + due_date + "##" + current_date + "\n";
+	}
+
+	public String getPlace() {
+		return place;
+	}
+
+	public void setPlace(String place) {
+		this.place = place;
+	}
+
+	public String getImportance() {
+		return importance;
+	}
+
+	public void setImportance(String importance) {
+		this.importance = importance;
 	}
 }

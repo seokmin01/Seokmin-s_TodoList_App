@@ -24,7 +24,7 @@ public class TablePanel extends JPanel {
 	JScrollPane scroll;
 	JTable table;
 	String[][] data;
-	String[] title = { "ID", "카테고리", "제목", "설명", "마감일자", "등록시간", "완료여부" };
+	String[] title = { "ID", "카테고리", "제목", "설명", "마감일자", "등록시간", "장소", "중요도", "완료여부" };
 	DefaultTableModel model = new DefaultTableModel(title, 0);
 
 	public TablePanel() {
@@ -36,7 +36,7 @@ public class TablePanel extends JPanel {
 		titleLabel.setPreferredSize(new Dimension(1000, 70));
 		titleLabel.setFont(new Font("Monospaced", Font.BOLD, 24));
 		titleLabel.setHorizontalAlignment(JLabel.CENTER);
-		titleLabel.setOpaque(true); 
+		titleLabel.setOpaque(true);
 		titleLabel.setForeground(Color.BLACK);
 		titleLabel.setBackground(new Color(211, 232, 225));
 		add(titleLabel);
@@ -52,7 +52,9 @@ public class TablePanel extends JPanel {
 		table.getColumn("설명").setPreferredWidth(300);
 		table.getColumn("마감일자").setPreferredWidth(150);
 		table.getColumn("등록시간").setPreferredWidth(250);
-		table.getColumn("완료여부").setPreferredWidth(50);
+		table.getColumn("장소").setPreferredWidth(100);
+		table.getColumn("중요도").setPreferredWidth(100);
+		table.getColumn("완료여부").setPreferredWidth(70);
 		scroll = new JScrollPane(table);
 		scroll.setPreferredSize(new Dimension(1000, 500));
 		add(scroll);
@@ -66,7 +68,9 @@ public class TablePanel extends JPanel {
 			table.getColumn("설명").setPreferredWidth(300);
 			table.getColumn("마감일자").setPreferredWidth(150);
 			table.getColumn("등록시간").setPreferredWidth(250);
-			table.getColumn("완료여부").setPreferredWidth(50);
+			table.getColumn("장소").setPreferredWidth(100);
+			table.getColumn("중요도").setPreferredWidth(100);
+			table.getColumn("완료여부").setPreferredWidth(70);
 			table.setFillsViewportHeight(true);
 			scroll = new JScrollPane(table);
 			scroll.setPreferredSize(new Dimension(1000, 500));
@@ -92,12 +96,22 @@ public class TablePanel extends JPanel {
 				String due_date = rs.getString("due_date");
 				String current_date = rs.getString("current_date");
 				int is_completed = rs.getInt("is_completed");
-				String str;
-				if (is_completed == 1)
-					str = "V";
+				String place = rs.getString("place");
+				String importance = rs.getString("importance");
+				String importance_str;
+				if (importance == "3")
+					importance_str = "상";
+				else if (importance == "2")
+					importance_str = "중";
 				else
-					str = "";
-				String[] itemInfo = { id, category, title, description, due_date, current_date, str };
+					importance_str = "하";
+				String is_completed_str;
+				if (is_completed == 1)
+					is_completed_str = "V";
+				else
+					is_completed_str = "";
+				String[] itemInfo = { id, category, title, description, due_date, current_date, place, importance_str,
+						is_completed_str };
 				list[i] = itemInfo;
 				i++;
 			}

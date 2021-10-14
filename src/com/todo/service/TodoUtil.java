@@ -16,7 +16,7 @@ public class TodoUtil {
 
 	public static void createItem(TodoList l) {
 
-		String title, category, desc, due_date;
+		String title, category, desc, due_date, place, importance;
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("\n" + "[할 일 추가]\n" + "제목 > ");
@@ -36,37 +36,33 @@ public class TodoUtil {
 		System.out.print("마감일자 (yyyy/mm/dd) > ");
 		due_date = sc.nextLine().trim();
 
-		TodoItem t = new TodoItem(title, category, desc, due_date);
+		System.out.print("장소 > ");
+		place = sc.nextLine().trim();
+
+		System.out.print("중요도 (상:3, 중:2, 하:1) > ");
+		importance = sc.nextLine().trim();
+
+		TodoItem t = new TodoItem(title, category, desc, due_date, place, importance);
 		if (l.addItem(t) > 0)
 			System.out.println("추가되었습니다.");
 	}
 
 	public static void deleteItem(TodoList l) {
 
-		int i = 1;
-		int n;
-		String chk;
-
 		Scanner sc = new Scanner(System.in);
-
 		System.out.print("\n" + "[할 일 삭제]\n" + "삭제할 할 일의 번호 > ");
 
-		n = sc.nextInt();
-
+		int n = sc.nextInt();
 		if (l.deleteItem(n) > 0)
 			System.out.println("삭제되었습니다.");
 	}
 
 	public static void updateItem(TodoList l) {
 
-		int i = 1;
-		int n;
 		Scanner sc = new Scanner(System.in);
-
 		System.out.print("\n" + "[할 일 수정]\n" + "수정할 할 일의 번호 > ");
 
-		n = sc.nextInt();
-
+		int n = sc.nextInt();
 		sc.nextLine();
 		System.out.print("새로운 제목 > ");
 		String new_title = sc.nextLine().trim();
@@ -80,7 +76,13 @@ public class TodoUtil {
 		System.out.print("새로운 마감일자 > ");
 		String new_due_date = sc.nextLine().trim();
 
-		TodoItem t = new TodoItem(new_title, new_category, new_description, new_due_date);
+		System.out.print("새로운 장소 > ");
+		String new_place = sc.nextLine().trim();
+
+		System.out.print("새로운 중요도 > ");
+		String new_importance = sc.nextLine().trim();
+
+		TodoItem t = new TodoItem(new_title, new_category, new_description, new_due_date, new_place, new_importance);
 		t.setId(n);
 		if (l.updateItem(t) > 0)
 			System.out.println("수정되었습니다.");
@@ -149,8 +151,10 @@ public class TodoUtil {
 				String desc = st.nextToken();
 				String due_date = st.nextToken();
 				String current_date = st.nextToken();
+				String place = st.nextToken();
+				String importance = st.nextToken();
 
-				TodoItem t = new TodoItem(title, category, desc, due_date, current_date);
+				TodoItem t = new TodoItem(title, category, desc, due_date, current_date, place, importance);
 				l.addItem(t);
 				count++;
 			}
