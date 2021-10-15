@@ -28,17 +28,17 @@ public class TablePanel extends JPanel {
 	DefaultTableModel model = new DefaultTableModel(title, 0);
 
 	public TablePanel() {
-		setBackground(new Color(211, 232, 225));
+		setBackground(new Color(41,134,204));
 		setBorder(new EmptyBorder(50, 50, 50, 50));
 		this.conn = DbConnect.getConnection();
 		JLabel titleLabel = new JLabel();
 		titleLabel.setText("Todo List");
-		titleLabel.setPreferredSize(new Dimension(1000, 70));
+		titleLabel.setPreferredSize(new Dimension(900, 70));
 		titleLabel.setFont(new Font("Monospaced", Font.BOLD, 24));
 		titleLabel.setHorizontalAlignment(JLabel.CENTER);
 		titleLabel.setOpaque(true);
-		titleLabel.setForeground(Color.BLACK);
-		titleLabel.setBackground(new Color(211, 232, 225));
+		titleLabel.setForeground(Color.WHITE);
+		titleLabel.setBackground(new Color(41,134,204));
 		add(titleLabel);
 
 		JButton refreshButton = new JButton("새로고침");
@@ -100,11 +100,11 @@ public class TablePanel extends JPanel {
 				String importance = rs.getString("importance");
 				String importance_str;
 				if (importance.equals("3"))
-					importance_str = "상";
+					importance_str = "☆☆☆";
 				else if (importance.equals("2"))
-					importance_str = "중";
+					importance_str = "☆☆";
 				else
-					importance_str = "하";
+					importance_str = "☆";
 				String is_completed_str;
 				if (is_completed == 1)
 					is_completed_str = "V";

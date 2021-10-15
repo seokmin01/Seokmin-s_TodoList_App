@@ -20,7 +20,7 @@ public class SwingGui extends JFrame {
 		pn.add(TablePn);
 
 		setContentPane(pn);
-		setSize(1280, 720);
+		setSize(1100, 720);
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setVisible(true);

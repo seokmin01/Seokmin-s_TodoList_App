@@ -115,7 +115,8 @@ public class TodoItem {
 	}
 
 	public String toSaveString() {
-		return category + "##" + title + "##" + desc + "##" + due_date + "##" + current_date + "\n";
+		return category + "##" + title + "##" + desc + "##" + due_date + "##" + current_date + "##" + place + "##"
+				+ importance + "\n";
 	}
 
 	public String getPlace() {
