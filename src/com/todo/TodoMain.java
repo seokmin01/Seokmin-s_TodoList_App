@@ -15,7 +15,7 @@ public class TodoMain {
 		boolean isList = false;
 		boolean quit = false;
 
-		TodoUtil.loadList(l, "todolist.json");
+//		TodoUtil.loadList(l, "todolist.json");
 		Menu.displaymenu();
 		do {
 			Menu.prompt();

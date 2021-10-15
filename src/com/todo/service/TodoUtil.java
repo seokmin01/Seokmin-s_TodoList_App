@@ -142,7 +142,7 @@ public class TodoUtil {
 	}
 
 	public static void loadList(TodoList l, String fileName) {
-		
+
 		// Read Json
 		try {
 			Reader reader = new FileReader(fileName);
@@ -166,12 +166,10 @@ public class TodoUtil {
 				l.addItem(t);
 			}
 
-			System.out.print(arr);
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 //		//Read txt
 //		try {
 //			BufferedReader br = new BufferedReader(new FileReader(fileName));
