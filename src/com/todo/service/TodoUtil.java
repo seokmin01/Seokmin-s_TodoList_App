@@ -170,7 +170,7 @@ public class TodoUtil {
 			e.printStackTrace();
 		}
 
-//		//Read txt
+//		// Read txt
 //		try {
 //			BufferedReader br = new BufferedReader(new FileReader(fileName));
 //			int count = 0;
