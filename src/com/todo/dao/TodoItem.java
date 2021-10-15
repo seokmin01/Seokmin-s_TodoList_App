@@ -37,6 +37,18 @@ public class TodoItem {
 		this.importance = importance;
 	}
 
+	public TodoItem(String title, String category, String desc, String due_date, String current_date, int is_completed,
+			String place, String importance) {
+		this.title = title;
+		this.category = category;
+		this.desc = desc;
+		this.due_date = due_date;
+		this.current_date = current_date;
+		this.is_completed = is_completed;
+		this.place = place;
+		this.importance = importance;
+	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -96,8 +108,10 @@ public class TodoItem {
 	@Override
 	public String toString() {
 		if (is_completed == 0)
-			return "[" + category + "] " + title + " - " + desc + " - " + due_date + " - " + current_date + " - " + place + " - " + importance;
-		return "[" + category + "] " + title + "[V] - " + desc + " - " + due_date + " - " + current_date + " - " + place + " - " + importance;
+			return "[" + category + "] " + title + " - " + desc + " - " + due_date + " - " + current_date + " - "
+					+ place + " - " + importance;
+		return "[" + category + "] " + title + "[V] - " + desc + " - " + due_date + " - " + current_date + " - " + place
+				+ " - " + importance;
 	}
 
 	public String toSaveString() {

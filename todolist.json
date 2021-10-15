@@ -1,0 +1,532 @@
+[
+  {
+    "title": "컴구HW1",
+    "category": "컴구",
+    "desc": "Digital Divide 글 작성하기",
+    "due_date": "2021/10/12",
+    "current_date": "2021/10/14 22:21:29",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "앱프HW1",
+    "category": "앱프",
+    "desc": "앱프 1차 과제 완료하기",
+    "due_date": "2021/10/4",
+    "current_date": "2021/10/14 22:22:34",
+    "place": "팀스페이스",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "러닝머신",
+    "category": "운동",
+    "desc": "러닝머신 30분 뛰기",
+    "due_date": "2021/10/30",
+    "current_date": "2021/10/14 22:23:54",
+    "place": "갈상헬스장",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "리액트JS",
+    "category": "공부",
+    "desc": "리액트JS 책 빌리기",
+    "due_date": "2021/10/9",
+    "current_date": "2021/10/14 22:25:41",
+    "place": "도서관",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "이산중간고사",
+    "category": "이산",
+    "desc": "이산 8주차 Mid Term 대비하기",
+    "due_date": "2021/10/4",
+    "current_date": "2021/10/14 22:26:04",
+    "place": "뉴턴홀",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "CSS공부",
+    "category": "웹서개",
+    "desc": "CSS 부분 복습하기",
+    "due_date": "2021/10/24",
+    "current_date": "2021/10/14 22:26:19",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "앱프HW2",
+    "category": "앱프",
+    "desc": "앱프 2차 과제 완료하기",
+    "due_date": "2021/10/26",
+    "current_date": "2021/10/14 22:26:25",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "사이니지",
+    "category": "근로",
+    "desc": "사이니지 영상 교체하기",
+    "due_date": "2021/10/11",
+    "current_date": "2021/10/14 22:26:53",
+    "place": "SW중심대",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "웹서개과제",
+    "category": "웹서개",
+    "desc": "웹서개 CSS 과제 완료하기",
+    "due_date": "2021/10/14",
+    "current_date": "2021/10/14 22:27:54",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "턱걸이",
+    "category": "운동",
+    "desc": "턱걸이 3세트",
+    "due_date": "2021/10/20",
+    "current_date": "2021/10/14 22:29:21",
+    "place": "갈상헬스장",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "이산수학복습",
+    "category": "이산",
+    "desc": "이산수학 재귀 부분 복습하기",
+    "due_date": "2021/10/11",
+    "current_date": "2021/10/14 22:33:57",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "팔굽혀펴기",
+    "category": "운동",
+    "desc": "팔굽혀펴기 5세트",
+    "due_date": "2021/10/9",
+    "current_date": "2021/10/14 22:36:58",
+    "place": "갈상헬스장",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "XAMPP",
+    "category": "웹서개",
+    "desc": "XAMPP 설치 및 사용하기",
+    "due_date": "2021/10/12",
+    "current_date": "2021/10/14 22:37:16",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "찜기능구현",
+    "category": "한슐랭프로젝트",
+    "desc": "즐겨찾기 기능 구현하기",
+    "due_date": "2021/10/7",
+    "current_date": "2021/10/14 22:38:51",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "이산하브루타",
+    "category": "동아리",
+    "desc": "크라 사람들과 이산 스터디하기",
+    "due_date": "2021/10/6",
+    "current_date": "2021/10/14 22:39:18",
+    "place": "뉴턴홀",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "전전골든벨",
+    "category": "임원단",
+    "desc": "전전골든벨 진행하기",
+    "due_date": "2021/10/15",
+    "current_date": "2021/10/14 22:40:15",
+    "place": "임원단실",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "스쿼트",
+    "category": "운동",
+    "desc": "스쿼트 5세트",
+    "due_date": "2021/10/15",
+    "current_date": "2021/10/14 22:41:18",
+    "place": "갈상헬스장",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "팀스청소",
+    "category": "청소",
+    "desc": "바닥쓸기, 정리정돈하기",
+    "due_date": "2021/10/10",
+    "current_date": "2021/10/14 22:43:11",
+    "place": "팀스페이스",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "사물함정리",
+    "category": "청소",
+    "desc": "팀스 사물함 정리하기",
+    "due_date": "2021/10/8",
+    "current_date": "2021/10/14 22:46:02",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "자바스크립트",
+    "category": "공부",
+    "desc": "w3school에서 JS 공부하기",
+    "due_date": "2021/10/11",
+    "current_date": "2021/10/14 22:46:09",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "전전기도회",
+    "category": "임원단",
+    "desc": "전전기도회 진행하기",
+    "due_date": "2021/10/26",
+    "current_date": "2021/10/14 22:46:47",
+    "place": "임원단실",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "앱프복습",
+    "category": "앱프",
+    "desc": "앱프 html, css 내용 다시보기",
+    "due_date": "2021/10/12",
+    "current_date": "2021/10/14 22:47:42",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "바람막이배부",
+    "category": "임원단",
+    "desc": "전전바막 배부하기",
+    "due_date": "2021/10/10",
+    "current_date": "2021/10/14 22:48:47",
+    "place": "임원단실",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "회의",
+    "category": "임원단",
+    "desc": "정기회의 참석하기",
+    "due_date": "2021/10/4",
+    "current_date": "2021/10/14 22:49:26",
+    "place": "임원단실",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "실프개인프로젝트",
+    "category": "실프",
+    "desc": "개인 투두리스트 앱 완성하기",
+    "due_date": "2021/10/9",
+    "current_date": "2021/10/14 22:51:42",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "컴구HW2",
+    "category": "컴구",
+    "desc": "컴구 2차 과제 완료하기",
+    "due_date": "2021/10/16",
+    "current_date": "2021/10/14 22:52:21",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "동아리밥약속",
+    "category": "동아리",
+    "desc": "크라 사람들과 밥 먹기",
+    "due_date": "2021/10/17",
+    "current_date": "2021/10/14 22:53:24",
+    "place": "학관",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "리액트네이티브",
+    "category": "공부",
+    "desc": "리액트네이티브 책 빌리기",
+    "due_date": "2021/10/24",
+    "current_date": "2021/10/14 22:56:40",
+    "place": "도서관",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "컴구HW3",
+    "category": "컴구",
+    "desc": "컴구 3차 과제 완료하기",
+    "due_date": "2021/10/2",
+    "current_date": "2021/10/14 22:56:57",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "이산HW2",
+    "category": "이산",
+    "desc": "이산 2차 과제 완료하기",
+    "due_date": "2021/10/4",
+    "current_date": "2021/10/14 22:59:05",
+    "place": "팀스페이스",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "8장문제풀기",
+    "category": "ERC",
+    "desc": "교과서 8장 문제 풀기",
+    "due_date": "2021/10/11",
+    "current_date": "2021/10/14 23:21:14",
+    "place": "팀스페이스",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "크라개강총회",
+    "category": "동아리",
+    "desc": "크라 개강총회 참석하기",
+    "due_date": "2021/10/19",
+    "current_date": "2021/10/14 23:23:45",
+    "place": "동방",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "컴구중간고사",
+    "category": "컴구",
+    "desc": "컴구 8주차 Mid Term 대비하기",
+    "due_date": "2021/10/9",
+    "current_date": "2021/10/14 23:23:57",
+    "place": "뉴턴홀",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "실프6주차실습",
+    "category": "실프",
+    "desc": "SQL을 이용한 투두앱 구현",
+    "due_date": "2021/10/19",
+    "current_date": "2021/10/14 23:25:10",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "앱프중간고사",
+    "category": "앱프",
+    "desc": "앱프 8주차 Mid Term 대비하기",
+    "due_date": "2021/10/25",
+    "current_date": "2021/10/14 23:27:03",
+    "place": "현동홀",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "사무실청소",
+    "category": "근로",
+    "desc": "바닥 쓸기 및 닦기",
+    "due_date": "2021/10/10",
+    "current_date": "2021/10/14 23:28:04",
+    "place": "SW중심대",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "공유기능구현",
+    "category": "한슐랭프로젝트",
+    "desc": "카카오톡 공유 기능 구현하기",
+    "due_date": "2021/10/9",
+    "current_date": "2021/10/14 23:28:05",
+    "place": "팀스페이스",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "이산HW1",
+    "category": "이산",
+    "desc": "이산 1차 과제 완료하기",
+    "due_date": "2021/10/8",
+    "current_date": "2021/10/14 23:29:49",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "방청소",
+    "category": "청소",
+    "desc": "청소기 돌리기",
+    "due_date": "2021/10/10",
+    "current_date": "2021/10/14 23:31:30",
+    "place": "갈대상자관",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "피아노연습",
+    "category": "취미",
+    "desc": "kiss the rain 연습하기",
+    "due_date": "2021/10/25",
+    "current_date": "2021/10/14 23:32:12",
+    "place": "교회",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "윗몸일으키기",
+    "category": "운동",
+    "desc": "윗몸일으키기 5세트",
+    "due_date": "2021/10/7",
+    "current_date": "2021/10/14 23:37:11",
+    "place": "갈상헬스장",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "실프5주차실습",
+    "category": "실프",
+    "desc": "SQLite 사용해보기",
+    "due_date": "2021/10/16",
+    "current_date": "2021/10/14 23:38:54",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "디자인완성",
+    "category": "한슐랭프로젝트",
+    "desc": "프론트앤드 완성하기",
+    "due_date": "2021/10/18",
+    "current_date": "2021/10/14 23:39:13",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  },
+  {
+    "title": "전표제출",
+    "category": "근로",
+    "desc": "현동홀에 전표 제출하기",
+    "due_date": "2021/10/25",
+    "current_date": "2021/10/14 23:39:43",
+    "place": "SW중심대",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "XML공부",
+    "category": "웹서개",
+    "desc": "XML 부분 복습하기",
+    "due_date": "2021/10/3",
+    "current_date": "2021/10/14 23:44:20",
+    "place": "팀스페이스",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "중파배부",
+    "category": "임원단",
+    "desc": "전전중파 배부하기",
+    "due_date": "2021/10/31",
+    "current_date": "2021/10/14 23:50:34",
+    "place": "임원단실",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "컴구하브루타",
+    "category": "동아리",
+    "desc": "크라 사람들과 컴구 스터디하기",
+    "due_date": "2021/10/31",
+    "current_date": "2021/10/14 23:51:08",
+    "place": "뉴턴홀",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "알고리즘",
+    "category": "공부",
+    "desc": "DP 문제 5개 풀기",
+    "due_date": "2021/10/24",
+    "current_date": "2021/10/14 23:52:23",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "실프퀴즈",
+    "category": "실프",
+    "desc": "9주차 실프 퀴즈 준비하기",
+    "due_date": "2021/10/8",
+    "current_date": "2021/10/14 23:53:26",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "기타연습",
+    "category": "취미",
+    "desc": "falling slowly 연습하기",
+    "due_date": "2021/10/5",
+    "current_date": "2021/10/14 23:53:29",
+    "place": "갈대상자관",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "DB업데이트",
+    "category": "한슐랭프로젝트",
+    "desc": "식당정보 변동사항 적용하기",
+    "due_date": "2021/10/12",
+    "current_date": "2021/10/14 23:54:16",
+    "place": "팀스페이스",
+    "importance": "1",
+    "is_completed": 0
+  },
+  {
+    "title": "서류파쇄",
+    "category": "근로",
+    "desc": "버리는 서류 파쇄하기",
+    "due_date": "2021/10/6",
+    "current_date": "2021/10/14 23:54:59",
+    "place": "SW중심대",
+    "importance": "3",
+    "is_completed": 0
+  },
+  {
+    "title": "Essay완성",
+    "category": "ERC",
+    "desc": "Cause & Effect 에세이 완성",
+    "due_date": "2021/10/21",
+    "current_date": "2021/10/14 23:57:27",
+    "place": "팀스페이스",
+    "importance": "2",
+    "is_completed": 0
+  }
+]

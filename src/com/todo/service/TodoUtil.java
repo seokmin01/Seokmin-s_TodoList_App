@@ -1,16 +1,18 @@
 package com.todo.service;
 
-import java.util.*;
-
-import com.todo.dao.TodoItem;
-import com.todo.dao.TodoList;
-
-import java.io.Writer;
-import java.io.FileWriter;
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Reader;
+import java.io.Writer;
+import java.util.Scanner;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.todo.dao.TodoItem;
+import com.todo.dao.TodoList;
 
 public class TodoUtil {
 
@@ -140,31 +142,62 @@ public class TodoUtil {
 	}
 
 	public static void loadList(TodoList l, String fileName) {
+		
+		// Read Json
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(fileName));
-			int count = 0;
-			String todoLine;
-			while ((todoLine = br.readLine()) != null) {
-				StringTokenizer st = new StringTokenizer(todoLine, "##");
-				String category = st.nextToken();
-				String title = st.nextToken();
-				String desc = st.nextToken();
-				String due_date = st.nextToken();
-				String current_date = st.nextToken();
-				String place = st.nextToken();
-				String importance = st.nextToken();
+			Reader reader = new FileReader(fileName);
 
-				TodoItem t = new TodoItem(title, category, desc, due_date, current_date, place, importance);
+			Gson gson = new Gson();
+			JsonArray arr = gson.fromJson(reader, JsonArray.class);
+
+			for (int i = 0; i < arr.size(); i++) {
+				JsonObject obj = (JsonObject) arr.get(i);
+				String title = obj.get("title").getAsString();
+				String category = obj.get("category").getAsString();
+				String desc = obj.get("desc").getAsString();
+				String due_date = obj.get("due_date").getAsString();
+				String current_date = obj.get("current_date").getAsString();
+				int is_completed = obj.get("is_completed").getAsInt();
+				String place = obj.get("place").getAsString();
+				String importance = obj.get("importance").getAsString();
+
+				TodoItem t = new TodoItem(title, category, desc, due_date, current_date, is_completed, place,
+						importance);
 				l.addItem(t);
-				count++;
 			}
-			br.close();
-			System.out.println(count + "개의 항목을 읽었습니다.");
+
+			System.out.print(arr);
+
 		} catch (FileNotFoundException e) {
-			System.out.println(fileName + "라는 파일이 존재하지 않습니다.");
-		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+//		//Read txt
+//		try {
+//			BufferedReader br = new BufferedReader(new FileReader(fileName));
+//			int count = 0;
+//			String todoLine;
+//			while ((todoLine = br.readLine()) != null) {
+//				StringTokenizer st = new StringTokenizer(todoLine, "##");
+//				String category = st.nextToken();
+//				String title = st.nextToken();
+//				String desc = st.nextToken();
+//				String due_date = st.nextToken();
+//				String current_date = st.nextToken();
+//				String place = st.nextToken();
+//				String importance = st.nextToken();
+//
+//				TodoItem t = new TodoItem(title, category, desc, due_date, current_date, place, importance);
+//				l.addItem(t);
+//				count++;
+//			}
+//			br.close();
+//			System.out.println(count + "개의 항목을 읽었습니다.");
+//		} catch (FileNotFoundException e) {
+//			System.out.println(fileName + "라는 파일이 존재하지 않습니다.");
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	public static void findItem(TodoList l, String keyword) {

@@ -15,7 +15,7 @@ public class TodoMain {
 		boolean isList = false;
 		boolean quit = false;
 
-//		TodoUtil.loadList(l, "todolist.txt");
+		TodoUtil.loadList(l, "todolist.json");
 		Menu.displaymenu();
 		do {
 			Menu.prompt();
@@ -107,6 +107,6 @@ public class TodoMain {
 			if (isList)
 				TodoUtil.listAll(l);
 		} while (!quit);
-		TodoUtil.saveList(l, "todolist.txt");
+//		TodoUtil.saveList(l, "todolist.txt");
 	}
 }

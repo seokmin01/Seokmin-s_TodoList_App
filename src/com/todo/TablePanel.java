@@ -81,7 +81,7 @@ public class TablePanel extends JPanel {
 	}
 
 	public String[][] getDB() {
-		String[][] list = new String[100][10];
+		String[][] list = new String[1000][10];
 		Statement stmt;
 		try {
 			stmt = conn.createStatement();
@@ -99,9 +99,9 @@ public class TablePanel extends JPanel {
 				String place = rs.getString("place");
 				String importance = rs.getString("importance");
 				String importance_str;
-				if (importance == "3")
+				if (importance.equals("3"))
 					importance_str = "상";
-				else if (importance == "2")
+				else if (importance.equals("2"))
 					importance_str = "중";
 				else
 					importance_str = "하";
