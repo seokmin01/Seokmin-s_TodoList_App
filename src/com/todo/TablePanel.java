@@ -62,10 +62,10 @@ public class TablePanel extends JPanel {
 			remove(scroll);
 			data = getDB();
 			table = new JTable(data, title);
-			table.getColumn("ID").setPreferredWidth(20);
-			table.getColumn("카테고리").setPreferredWidth(100);
-			table.getColumn("제목").setPreferredWidth(100);
-			table.getColumn("설명").setPreferredWidth(300);
+			table.getColumn("ID").setPreferredWidth(30);
+			table.getColumn("카테고리").setPreferredWidth(110);
+			table.getColumn("제목").setPreferredWidth(140);
+			table.getColumn("설명").setPreferredWidth(260);
 			table.getColumn("마감일자").setPreferredWidth(150);
 			table.getColumn("등록시간").setPreferredWidth(250);
 			table.getColumn("장소").setPreferredWidth(100);
