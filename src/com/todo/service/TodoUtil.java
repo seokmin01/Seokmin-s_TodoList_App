@@ -107,6 +107,25 @@ public class TodoUtil {
 		}
 	}
 
+	public static void completeItem(TodoList l) {
+
+		Scanner sc = new Scanner(System.in);
+		int k;
+		System.out.print("\n" + "[할 일 완료 체크]\n" + "몇개의 할 일을 완료 체크하시겠습니까? (숫자 입력) > ");
+		k = sc.nextInt();
+		System.out.print("\n" + "완료 체크할 일의 번호 (공백으로 번호 구분) > ");
+
+		int n, cnt = 0;
+		for (int i = 0; i < k; i++) {
+			n = sc.nextInt();
+			l.completeItem(n);
+			cnt++;
+		}
+
+		if (cnt >= k)
+			System.out.println("완료한 할 일로 변경되었습니다.");
+	}
+
 	public static void completeList(TodoList l) {
 		int cnt = 0;
 		for (TodoItem item : l.completeList()) {

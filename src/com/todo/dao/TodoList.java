@@ -246,7 +246,7 @@ public class TodoList {
 		return false;
 	}
 
-	public boolean completeItem(int id) {
+	public Boolean completeItem(int id) {
 		String sql = "update list set is_completed=1 where id = " + id;
 		Statement stmt;
 		int count = 0;
