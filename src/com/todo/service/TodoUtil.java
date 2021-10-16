@@ -52,10 +52,18 @@ public class TodoUtil {
 	public static void deleteItem(TodoList l) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("\n" + "[할 일 삭제]\n" + "삭제할 할 일의 번호 > ");
+		int k;
+		System.out.print("\n" + "[할 일 삭제]\n" + "몇개의 할 일을 삭제하시겠습니까? (숫자 입력) > ");
+		k = sc.nextInt();
+		System.out.print("\n" + "삭제할 할 일의 번호 (공백으로 번호 구분) > ");
 
-		int n = sc.nextInt();
-		if (l.deleteItem(n) > 0)
+		int n, cnt = 0;
+		for (int i = 0; i < k; i++) {
+			n = sc.nextInt();
+			if (l.deleteItem(n) > 0)
+				cnt++;
+		}
+		if (cnt >= k)
 			System.out.println("삭제되었습니다.");
 	}
 
