@@ -1,7 +1,7 @@
 package com.todo.dao;
 
-import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TodoItem {
 	private int id;

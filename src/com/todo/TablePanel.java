@@ -37,7 +37,7 @@ public class TablePanel extends JPanel {
 	}
 
 	public TablePanel() {
-		setBackground(new Color(41,134,204));
+		setBackground(new Color(41, 134, 204));
 		setBorder(new EmptyBorder(50, 50, 50, 50));
 		this.conn = DbConnect.getConnection();
 		JLabel titleLabel = new JLabel();
@@ -47,17 +47,17 @@ public class TablePanel extends JPanel {
 		titleLabel.setHorizontalAlignment(JLabel.CENTER);
 		titleLabel.setOpaque(true);
 		titleLabel.setForeground(Color.WHITE);
-		titleLabel.setBackground(new Color(41,134,204));
+		titleLabel.setBackground(new Color(41, 134, 204));
 		add(titleLabel);
-		
+
 		JLabel countLabel = new JLabel();
 		countLabel.setPreferredSize(new Dimension(900, 30));
 		countLabel.setFont(new Font("Monospaced", Font.ITALIC, 17));
 		countLabel.setHorizontalAlignment(JLabel.CENTER);
 		countLabel.setOpaque(true);
 		countLabel.setForeground(Color.WHITE);
-		countLabel.setBackground(new Color(41,134,204));
-		
+		countLabel.setBackground(new Color(41, 134, 204));
+
 		JButton refreshButton = new JButton("새로고침");
 		add(refreshButton);
 

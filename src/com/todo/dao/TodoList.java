@@ -1,18 +1,17 @@
 package com.todo.dao;
 
-import java.util.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
+import com.todo.service.DbConnect;
 import com.todo.service.TodoSortByDate;
 import com.todo.service.TodoSortByName;
-import com.todo.service.DbConnect;
 
 public class TodoList {
 	private List<TodoItem> list;

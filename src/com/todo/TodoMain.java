@@ -86,9 +86,9 @@ public class TodoMain {
 				else
 					TodoUtil.completeItem(l, Integer.parseInt(input));
 				break;
-			
+
 			case "comp_s":
-					TodoUtil.completeItem(l);
+				TodoUtil.completeItem(l);
 				break;
 
 			case "ls_comp":

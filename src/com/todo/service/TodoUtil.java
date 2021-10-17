@@ -152,7 +152,7 @@ public class TodoUtil {
 	}
 
 	public static void saveList(TodoList l, String fileName) {
-		
+
 		try {
 			Writer w = new FileWriter(fileName);
 
