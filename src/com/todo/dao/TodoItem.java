@@ -115,8 +115,9 @@ public class TodoItem {
 	}
 
 	public String toSaveString() {
-		return "{\"" + title + "\",\"" + category + "\",\"" + desc + "\",\"" + due_date + "\",\"" + current_date
-				+ "\",\"" + place + "\",\"" + importance + "\"},\n";
+		return "{\"title\":\"" + title + "\",\"category\":\"" + category + "\",\"desc\":\"" + desc
+				+ "\",\"due_date\":\"" + due_date + "\",\"current_date\":\"" + current_date + "\",\"place\":\"" + place
+				+ "\",\"importance\":\"" + importance + "\",\"is_completed\":" + is_completed + "},\n";
 	}
 
 	public String getPlace() {

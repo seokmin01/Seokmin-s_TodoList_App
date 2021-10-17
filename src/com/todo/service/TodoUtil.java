@@ -156,9 +156,11 @@ public class TodoUtil {
 		try {
 			Writer w = new FileWriter(fileName);
 
+			w.write("[\n");
 			for (TodoItem item : l.getList()) {
 				w.write(item.toSaveString());
 			}
+			w.write("{}\n]\n");
 			w.close();
 
 			System.out.println("모든 할 일 목록이 저장되었습니다.");
