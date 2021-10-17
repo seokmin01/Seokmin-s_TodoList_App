@@ -26,6 +26,15 @@ public class TablePanel extends JPanel {
 	String[][] data;
 	String[] title = { "ID", "카테고리", "제목", "설명", "마감일자", "등록시간", "장소", "중요도", "완료여부" };
 	DefaultTableModel model = new DefaultTableModel(title, 0);
+	int dataCount;
+
+	public int getDataCount() {
+		return dataCount;
+	}
+
+	public void setDataCount(int dataCount) {
+		this.dataCount = dataCount;
+	}
 
 	public TablePanel() {
 		setBackground(new Color(41,134,204));
@@ -33,14 +42,22 @@ public class TablePanel extends JPanel {
 		this.conn = DbConnect.getConnection();
 		JLabel titleLabel = new JLabel();
 		titleLabel.setText("Todo List");
-		titleLabel.setPreferredSize(new Dimension(900, 70));
+		titleLabel.setPreferredSize(new Dimension(900, 50));
 		titleLabel.setFont(new Font("Monospaced", Font.BOLD, 24));
 		titleLabel.setHorizontalAlignment(JLabel.CENTER);
 		titleLabel.setOpaque(true);
 		titleLabel.setForeground(Color.WHITE);
 		titleLabel.setBackground(new Color(41,134,204));
 		add(titleLabel);
-
+		
+		JLabel countLabel = new JLabel();
+		countLabel.setPreferredSize(new Dimension(900, 30));
+		countLabel.setFont(new Font("Monospaced", Font.ITALIC, 17));
+		countLabel.setHorizontalAlignment(JLabel.CENTER);
+		countLabel.setOpaque(true);
+		countLabel.setForeground(Color.WHITE);
+		countLabel.setBackground(new Color(41,134,204));
+		
 		JButton refreshButton = new JButton("새로고침");
 		add(refreshButton);
 
@@ -57,6 +74,8 @@ public class TablePanel extends JPanel {
 		table.getColumn("완료여부").setPreferredWidth(70);
 		scroll = new JScrollPane(table);
 		scroll.setPreferredSize(new Dimension(1000, 500));
+		countLabel.setText("총 항목 개수: " + Integer.toString(this.getDataCount()));
+		add(countLabel);
 		add(scroll);
 		refreshButton.addActionListener(e -> {
 			remove(scroll);
@@ -74,6 +93,8 @@ public class TablePanel extends JPanel {
 			table.setFillsViewportHeight(true);
 			scroll = new JScrollPane(table);
 			scroll.setPreferredSize(new Dimension(1000, 500));
+			countLabel.setText("총 항목 개수: " + Integer.toString(this.getDataCount()));
+			add(countLabel);
 			add(scroll);
 			revalidate();
 			repaint();
@@ -107,7 +128,7 @@ public class TablePanel extends JPanel {
 					importance_str = "☆";
 				String is_completed_str;
 				if (is_completed == 1)
-					is_completed_str = "V";
+					is_completed_str = " ✓";
 				else
 					is_completed_str = "";
 				String[] itemInfo = { id, category, title, description, due_date, current_date, place, importance_str,
@@ -115,6 +136,7 @@ public class TablePanel extends JPanel {
 				list[i] = itemInfo;
 				i++;
 			}
+			this.setDataCount(i);
 			stmt.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
