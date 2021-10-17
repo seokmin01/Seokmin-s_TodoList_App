@@ -153,23 +153,20 @@ public class TodoUtil {
 
 	public static void saveList(TodoList l, String fileName) {
 		
-		// TODO::Write json
-		
-		// Write txt
-//		try {
-//			Writer w = new FileWriter(fileName);
-//
-//			for (TodoItem item : l.getList()) {
-//				w.write(item.toSaveString());
-//			}
-//			w.close();
-//
-//			System.out.println("모든 할 일 목록이 저장되었습니다.");
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			Writer w = new FileWriter(fileName);
+
+			for (TodoItem item : l.getList()) {
+				w.write(item.toSaveString());
+			}
+			w.close();
+
+			System.out.println("모든 할 일 목록이 저장되었습니다.");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void loadList(TodoList l, String fileName) {
